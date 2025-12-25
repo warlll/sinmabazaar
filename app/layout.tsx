@@ -1,15 +1,16 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "SINMA BAZAAR - Local Bazaar Store",
-  description: "Shop women's clothing, kitchenware, and accessories at SINMA BAZAAR",
+  title: "SINMA BAZAAR | متجر سينما بازار",
+  description: "متجر متخصص في الملابس النسائية، الأواني المطبخية، والإكسسوارات | Women's Clothing, Kitchenware & Accessories",
+  authors: [{ name: "SINMA BAZAAR" }],
+  keywords: ["sinma", "bazaar", "shopping", "women clothing", "kitchenware", "accessories", "online store"],
   icons: {
     icon: [
       {
@@ -35,10 +36,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="ar" dir="rtl">
       <body className={`font-sans antialiased`}>
         {children}
-        <Analytics />
       </body>
     </html>
   )
